@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O2 Standardisation — Project Roadmap (Draft)</title>
+<style>
+  :root{--bg:#f3f6fb;--panel:#fff;--ink:#1a2233;--muted:#66738a;--line:#e2e8f2;
+    --navy:#1F3864;--blue:#2E5496;--teal:#4E9CB5;--olive:#6C8A4E;--rose:#B5546B;--amber:#E1A85F;--green:#12946A;--warn:#C0392B;
+    --shadow:0 1px 2px rgba(31,56,100,.05),0 3px 10px rgba(31,56,100,.06);}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,Helvetica,sans-serif;font-size:13px;line-height:1.45}
+  .wrap{max-width:1200px;margin:0 auto;padding:14px 16px 46px}
+  .hdr{background:linear-gradient(100deg,var(--navy),var(--blue));color:#fff;border-radius:12px;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:var(--shadow)}
+  .hdr h1{font-size:18px;margin:0;font-weight:650}
+  .hdr .sub{font-size:12px;opacity:.85;margin-top:3px}
+  .hdr .brand{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.72}
+  .draft{display:inline-block;background:#fdecc8;color:#8a5a00;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:8px;vertical-align:middle}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:15px 17px;margin-top:14px}
+  h2{font-size:14.5px;margin:0 0 3px}
+  .csub{font-size:11.5px;color:var(--muted);margin:0 0 12px}
+  .near{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .near .box{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:#fafcff}
+  .near .date{font-size:11px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.4px}
+  .near ul{margin:7px 0 0;padding-left:18px}
+  .near li{margin:3px 0}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);margin:2px 0 10px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .dia{width:11px;height:11px;background:var(--warn);display:inline-block;transform:rotate(45deg);border-radius:2px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.3px;font-weight:600}
+  td.ph{font-weight:700;white-space:nowrap}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 8px;border-radius:20px;color:#fff}
+  .decist{background:#fff8e6;border:1px solid #f1d98a;border-left:4px solid var(--amber);border-radius:10px;padding:12px 15px;margin-top:14px;font-size:12.5px}
+  .decist b{color:#8a5a00}
+  .decist ul{margin:8px 0 0;padding-left:18px}.decist li{margin:4px 0}
+  .foot{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.5}
+  @media(max-width:820px){.near{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div>
+      <h1>O2 Standardisation — Project Roadmap <span class="draft">DRAFT ESTIMATE</span></h1>
+      <div class="sub">Compliance &amp; revenue recovery · target 90% · from Aug 2026 to validated recovery by Dec 2026</div>
+    </div>
+    <div class="brand">Siloam Hospitals · Finance</div>
+  </div>
+
+  <!-- NEXT 2 WEEKS -->
+  <div class="card">
+    <h2>Next 2 weeks — consultations &amp; decisions (25–28 Aug)</h2>
+    <p class="csub">Firming up scope and owners before we lock the timeline. Two threads: pricing/data, and change-management.</p>
+    <div class="near">
+      <div class="box">
+        <div class="date">Wed 27 Aug · Pricing &amp; data</div>
+        <ul>
+          <li><b>Pharmacy + IT + Power BI team</b> (Bu Tuty, Pak Benny): align on data pipeline &amp; dashboard.</li>
+          <li><b>Bu Thelvi — pricing:</b> O2/Hour at Kebon Jeruk (SHKJ) &amp; anaesthetic O2/15′ at Balikpapan (SHBP).</li>
+          <li>Decide the <b>standard sales item</b> to use; review impact.</li>
+          <li>Verify backend: is it <b>one sales item</b> that already <b>tiers by class</b> in the system?</li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="date">25–28 Aug · Change management</div>
+        <ul>
+          <li><b>Bu Silvi Roselina:</b> for the socialisation — who should be invited?</li>
+          <li>From the <b>networks</b>, who must push adoption down to the units?</li>
+          <li>Confirm enforcement approach for unit personnel.</li>
+          <li>Nominate a <b>tracking PIC per hospital unit</b>.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- GANTT -->
+  <div class="card">
+    <h2>Timeline (estimated)</h2>
+    <p class="csub">Dates are estimates to be confirmed in the stakeholder discussions above. Diamonds = milestones.</p>
+    <div class="legend" id="legend"></div>
+    <div id="gantt"></div>
+  </div>
+
+  <!-- PHASE TABLE -->
+  <div class="card">
+    <h2>Step-by-step plan</h2>
+    <p class="csub">Sequence, owners, and estimated windows.</p>
+    <table><thead><tr><th style="width:150px">Phase</th><th>Step</th><th style="width:190px">Owner</th><th style="width:120px">Estimate</th></tr></thead>
+    <tbody id="ptable"></tbody></table>
+  </div>
+
+  <!-- FINANCIAL IMPACT -->
+  <div class="card">
+    <h2>Expected EBITDA impact <span style="font-weight:400;font-size:11.5px;color:var(--muted)">· per 2026 Finance Projects Tracker (Project #14 · Revenue Assurance · Stage 2 · On track)</span></h2>
+    <p class="csub">The realization ramp lines up with the roadmap: pilot result at Kebon Jeruk lands the first impact in Oct, network rollout builds Nov–Dec, full run-rate in FY27.</p>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center">
+      <div id="impact"></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div style="border:1px solid var(--line);border-radius:10px;padding:11px 15px;min-width:150px">
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;font-weight:600">FY2026 impact (7A+5F)</div>
+          <div style="font-size:24px;font-weight:700;color:var(--navy);margin-top:5px">Rp 564 Mn</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:3px">realized Oct–Dec 2026</div>
+        </div>
+        <div style="border:1px solid var(--line);border-radius:10px;padding:11px 15px;min-width:150px">
+          <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;font-weight:600">FY2027 full-year</div>
+          <div style="font-size:24px;font-weight:700;color:var(--green);margin-top:5px">Rp 3,079 Mn</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:3px">≈ Rp 257 Mn / month run-rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DECISIONS -->
+  <div class="decist">
+    <b>⚠ Open decisions to resolve before we lock dates</b>
+    <ul>
+      <li><b>Sales-item standardisation:</b> which item for O2/Hour (SHKJ) and anaesthetic O2/15′ (SHBP)? Is the backend one item with per-class tiering, or separate items per class?</li>
+      <li><b>Pricing correction impact:</b> confirm corrected per-hospital prices (from the cleaned O2 PRICE master) before the memo is published.</li>
+      <li><b>Socialisation list &amp; network sponsors:</b> pending Bu Silvi Roselina + network leads.</li>
+      <li><b>Dashboard sign-off:</b> reconcile the 64.6% vs 65.6% compliance scope; validate &amp; test before any rollout.</li>
+      <li><b>Pilot success metric for Kebon Jeruk:</b> define what "substantive result" means (e.g. compliance ≥ X%, Rp recovered).</li>
+    </ul>
+  </div>
+
+  <div class="foot">People: Bu Tuty &amp; Pak Benny (Pharmacy), IT team, Power BI team, Bu Thelvi (Pricing), Bu Silvi Roselina (change management / socialisation), Network leads, Finance (project lead + CFO Daniel Phua), and a tracking PIC per hospital unit. · Prepared as a draft for the ~2-week planning discussions.</div>
+</div>
+
+<script>
+const START=new Date('2026-08-18'), END=new Date('2026-12-31');
+const DAYS=(END-START)/86400000;
+const PAD_L=232, PAD_R=16, PAD_T=44, ROW=27, W=1120;
+const col={A:'#2E5496',B:'#4E9CB5',C:'#6C8A4E',D:'#B5546B',E:'#E1A85F',F:'#1F3864',G:'#12946A'};
+const phaseName={A:'Align & Pricing',B:'Change mgmt',C:'Dashboard',D:'Internal memo',E:'Socialise & enforce',F:'Pilot — Kebon Jeruk',G:'Network rollout'};
+
+// tasks: phase, label, owner, start, end (or milestone d)
+const T=[
+ {p:'A',t:'Pharmacy + IT + Power BI alignment',o:'Bu Tuty, Pak Benny, IT, BI',m:'2026-08-27'},
+ {p:'A',t:'Pricing & sales-item clarification',o:'Bu Thelvi / Finance',s:'2026-08-27',e:'2026-09-05'},
+ {p:'A',t:'Decide std sales item + verify backend tiering',o:'Finance, IT, Pharmacy',s:'2026-08-28',e:'2026-09-09'},
+ {p:'B',t:'Consult on socialisation invitees',o:'Bu Silvi Roselina',s:'2026-08-25',e:'2026-08-28'},
+ {p:'B',t:'Identify network sponsors to push units',o:'Networks / Finance',s:'2026-08-25',e:'2026-08-29'},
+ {p:'C',t:'Validate & test dashboard (accuracy, scope, pricing)',o:'Power BI team / Finance',s:'2026-08-20',e:'2026-09-12'},
+ {p:'C',t:'Finalise dashboard as weekly tracking tool',o:'Power BI team',s:'2026-09-08',e:'2026-09-15'},
+ {p:'D',t:'Finalise memo — tracking via dashboard, BAU + attention',o:'Finance (Nicole)',s:'2026-09-01',e:'2026-09-12'},
+ {p:'D',t:'Publish internal memo',o:'CFO / Finance',m:'2026-09-15'},
+ {p:'E',t:'Socialise to unit personnel (per Bu Silvi)',o:'Bu Silvi / Networks',s:'2026-09-15',e:'2026-09-26'},
+ {p:'E',t:'Assign tracking PIC per hospital unit',o:'Unit heads / Finance',s:'2026-09-15',e:'2026-09-26'},
+ {p:'E',t:'Enforce standard billing + weekly monitoring',o:'Units / Fin. Controller',s:'2026-09-22',e:'2026-12-31'},
+ {p:'F',t:'Pilot go-live at Kebon Jeruk (SHKJ)',o:'SHKJ + Finance',m:'2026-09-30'},
+ {p:'F',t:'Weekly monitoring + recover non-comply @ SHKJ',o:'SHKJ + Finance',s:'2026-09-30',e:'2026-10-31'},
+ {p:'F',t:'Substantive result — Kebon Jeruk (~1 month)',o:'Finance',m:'2026-10-31'},
+ {p:'G',t:'Roll out to all hospital units',o:'Networks / Finance',s:'2026-11-01',e:'2026-11-30'},
+ {p:'G',t:'Weekly tracking + recovery, all units',o:'Units / Finance',s:'2026-11-03',e:'2026-12-31'},
+ {p:'G',t:'Validated substantive revenue recovered (all units)',o:'Finance / CFO',m:'2026-12-31'},
+];
+const NPH=new Set(T.map(k=>k.p)).size;
+const H=PAD_T+T.length*ROW+NPH*20+16;
+const NS="http://www.w3.org/2000/svg";
+function el(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function tx(x,y,s,o={}){const t=el("text",{x,y,fill:o.fill||'#66738a','font-size':o.fs||11,'text-anchor':o.anchor||'start','font-weight':o.fw||400});t.textContent=s;return t;}
+const X=d=>PAD_L+((new Date(d)-START)/86400000)/DAYS*(W-PAD_L-PAD_R);
+
+const s=el("svg",{viewBox:`0 0 ${W} ${H}`,width:"100%",height:H,style:"overflow:visible"});
+// month grid
+const months=[['Aug','2026-08-18'],['Sep','2026-09-01'],['Oct','2026-10-01'],['Nov','2026-11-01'],['Dec','2026-12-01'],['',  '2026-12-31']];
+for(let i=0;i<months.length-1;i++){
+  const x0=X(months[i][1]);
+  s.appendChild(el("line",{x1:x0,x2:x0,y1:PAD_T-16,y2:H-8,stroke:'#eef1f5'}));
+  s.appendChild(tx((x0+X(months[i+1][1]))/2,PAD_T-22,months[i][0],{anchor:'middle',fill:'#1a2233',fw:700,fs:12}));
+}
+// today line
+const tX=X('2026-08-20');
+s.appendChild(el("line",{x1:tX,x2:tX,y1:PAD_T-16,y2:H-8,stroke:'#C0392B','stroke-width':1.3,'stroke-dasharray':'4 3'}));
+s.appendChild(tx(tX+3,PAD_T-18,'today',{fill:'#C0392B',fs:9.5,fw:700}));
+
+// rows with phase band headers
+let y=PAD_T, prev=null;
+T.forEach(k=>{
+  if(k.p!==prev){
+    s.appendChild(el("rect",{x:8,y:y,width:W-PAD_R-8,height:17,rx:4,fill:col[k.p],opacity:.10}));
+    s.appendChild(tx(14,y+12.5,phaseName[k.p].toUpperCase(),{fill:col[k.p],fw:700,fs:10}));
+    y+=20; prev=k.p;
+  }
+  s.appendChild(tx(PAD_L-8,y+11,k.t.length>36?k.t.slice(0,35)+'…':k.t,{anchor:'end',fill:'#1a2233',fs:10.5}));
+  s.appendChild(tx(PAD_L-8,y+21,k.o.length>32?k.o.slice(0,31)+'…':k.o,{anchor:'end',fill:'#8a93a3',fs:9}));
+  if(k.m){ const mx=X(k.m),my=y+10;
+    s.appendChild(el("rect",{x:mx-5,y:my-5,width:10,height:10,fill:'#C0392B',transform:`rotate(45 ${mx} ${my})`,rx:1}));
+    s.appendChild(tx(mx+9,my+4,new Date(k.m).toLocaleDateString('en-GB',{day:'numeric',month:'short'}),{fill:'#7a2018',fs:9.5,fw:700}));
+  } else {
+    const x1=X(k.s),x2=X(k.e);
+    s.appendChild(el("rect",{x:x1,y:y+3,width:Math.max(4,x2-x1),height:14,rx:4,fill:col[k.p],opacity:.92}));
+  }
+  y+=ROW;
+});
+document.getElementById('gantt').appendChild(s);
+
+// legend
+const lg=document.getElementById('legend');
+Object.keys(phaseName).forEach(p=>{const sp=document.createElement('span');sp.innerHTML=`<i class="sw" style="background:${col[p]}"></i>${phaseName[p]}`;lg.appendChild(sp);});
+const md=document.createElement('span');md.innerHTML='<i class="dia"></i>Milestone';lg.appendChild(md);
+
+// impact mini-bar (Oct/Nov/Dec 2026)
+(function(){const d=[['Aug',0],['Sep',0],['Oct',154],['Nov',205],['Dec',205]],W=340,H=170,pl=30,pr=12,pt=14,pb=28,max=240;
+ const sv=el("svg",{viewBox:`0 0 ${W} ${H}`,width:W,height:H});
+ const Y=v=>pt+(1-v/max)*(H-pt-pb),bw=(W-pl-pr)/d.length*0.6;
+ [0,100,200].forEach(g=>{sv.appendChild(el("line",{x1:pl,x2:W-pr,y1:Y(g),y2:Y(g),stroke:'#eef1f5'}));sv.appendChild(tx(pl-6,Y(g)+3,g,{anchor:'end',fs:9.5}));});
+ d.forEach((m,i)=>{const cx=pl+(i+.5)*((W-pl-pr)/d.length);
+   if(m[1]>0){sv.appendChild(el("rect",{x:cx-bw/2,y:Y(m[1]),width:bw,height:(H-pb)-Y(m[1]),rx:3,fill:'#2E5496'}));
+     sv.appendChild(tx(cx,Y(m[1])-5,m[1],{anchor:'middle',fill:'#1F3864',fw:700,fs:10}));}
+   sv.appendChild(tx(cx,H-pb+15,m[0],{anchor:'middle',fs:10}));});
+ sv.appendChild(tx(pl-6,pt-3,'Rp Mn',{anchor:'end',fs:9}));
+ document.getElementById('impact').appendChild(sv);})();
+
+// phase table
+const tb=document.getElementById('ptable');
+let last=null;
+T.forEach(k=>{
+  const tr=document.createElement('tr');
+  const when=k.m?new Date(k.m).toLocaleDateString('en-GB',{day:'numeric',month:'short'})
+    :`${new Date(k.s).toLocaleDateString('en-GB',{day:'numeric',month:'short'})}–${new Date(k.e).toLocaleDateString('en-GB',{day:'numeric',month:'short'})}`;
+  const phcell = k.p!==last ? `<td class="ph"><span class="pill" style="background:${col[k.p]}">${phaseName[k.p]}</span></td>` : '<td></td>';
+  last=k.p;
+  tr.innerHTML=`${phcell}<td>${k.t}${k.m?' <b style="color:#C0392B">◆ milestone</b>':''}</td><td style="color:#66738a">${k.o}</td><td>${when}</td>`;
+  tb.appendChild(tr);
+});
+</script>
+</body>
+</html>
